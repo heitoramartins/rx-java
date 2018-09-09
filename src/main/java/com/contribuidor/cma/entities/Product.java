@@ -11,31 +11,26 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Getter
 @Setter
-@Table
-@Entity(name = "product")
+@Entity
+@Table(name = "product")
 public class Product {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-	
-	@NotNull
+
 	private String name;
 
 	private String description;
 
-	@NotNull
 	private BigDecimal price;
-	
-	@NotNull
-	@ManyToOne
+
+	@ManyToOne(targetEntity = Category.class, fetch = FetchType.LAZY)
 	@JoinColumn(name = "fk_category")
 	private Category category;
 
-	@NotNull
 	private String storeId;
 
-	@NotNull
 	private Boolean active;
 	
 	public Product() {

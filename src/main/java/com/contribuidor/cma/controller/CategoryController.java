@@ -6,8 +6,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import com.contribuidor.cma.entities.Category;
-import com.contribuidor.cma.exception.CategoryNotFound;
-import com.contribuidor.cma.service.CategoryService;
+import com.contribuidor.cma.exception.entityerror.CategoryNotFound;
+import com.contribuidor.cma.service.category.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
