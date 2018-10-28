@@ -17,7 +17,7 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-	
+
 	@NotNull
 	private String name;
 
@@ -27,9 +27,8 @@ public class Category {
 	public Category() {
 		this.active = true;
 	}
-	
+
 	public Category(String name) {
-		this();
 		this.name = name;
 	}
 
